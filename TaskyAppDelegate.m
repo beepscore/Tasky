@@ -29,14 +29,15 @@
     
     task = [[NSTask alloc] init];
     outPipe = [[NSPipe alloc] init];
-    
-    // find path by opening terminal and typing "which ls"
+
+    // construct a command of the form ls -la <pathOfDirectoryToList>
+    // e.g.                            ls -la /users/johndoe/documents
+    // find launchPath by opening terminal and typing "which ls"
     [task setLaunchPath:@"/bin/ls"];
     [task setStandardOutput:outPipe];
     
-    // TODO: get path argument from pathTextField
     [task setArguments:[NSArray arrayWithObjects:@"-la",
-                        @"/Users/stevebaker/documents/iphoneprojects",
+                        [self.pathTextField stringValue],
                         nil]];
     
     [task launch];
