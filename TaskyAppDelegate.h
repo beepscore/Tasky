@@ -10,14 +10,14 @@
 
 @interface TaskyAppDelegate : NSObject <NSApplicationDelegate> {
     NSWindow *window;
-    NSTextView *inText;
+    NSTextField *pathTextField;
     NSTextView *outText;
 }
 
 #pragma mark -
 #pragma mark properties
 @property (assign) IBOutlet NSWindow *window;
-@property(nonatomic,retain)IBOutlet NSTextView *inText;
+@property(nonatomic,retain)IBOutlet NSTextField *pathTextField;
 @property(nonatomic,retain)IBOutlet NSTextView *outText;
 
 - (IBAction) handleListButton:(id)sender;

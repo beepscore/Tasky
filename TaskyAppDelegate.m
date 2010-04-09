@@ -13,7 +13,7 @@
 #pragma mark -
 #pragma mark properties
 @synthesize window;
-@synthesize inText;
+@synthesize pathTextField;
 @synthesize outText;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
@@ -23,42 +23,38 @@
 - (IBAction) handleListButton:(id)sender {
     
     NSData *data;
-    NSPipe *inPipe, *outPipe;
-    NSFileHandle *writingHandle;
+    NSPipe *outPipe;
     NSTask *task;
     NSString *aString;
     
     task = [[NSTask alloc] init];
-    inPipe = [[NSPipe alloc] init];
     outPipe = [[NSPipe alloc] init];
     
-    [task setLaunchPath:@"/usr/bin/sort"];
-    [task setStandardInput:inPipe];
+    // find path by opening terminal and typing "which ls"
+    [task setLaunchPath:@"/bin/ls"];
     [task setStandardOutput:outPipe];
-    [task setArguments:[NSArray arrayWithObject:@"-f"]];
+    
+    // TODO: get path argument from pathTextField
+    [task setArguments:[NSArray arrayWithObjects:@"-la",
+                        @"/Users/stevebaker/documents/iphoneprojects",
+                        nil]];
     
     [task launch];
-    
-    writingHandle = [inPipe fileHandleForWriting];
-    [writingHandle writeData:[[inText string] dataUsingEncoding:NSUTF8StringEncoding]];
-    [writingHandle closeFile];
     
     data = [[outPipe fileHandleForReading] readDataToEndOfFile];
     aString = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
     [outText setString:aString];
     [aString release];
     [task release];
-    [inPipe release];
     [outPipe release];
 }
 
 
 - (void)dealloc {
-    [inText release], inText = nil;
+    [pathTextField release], pathTextField = nil;
     [outText release], outText = nil;
     
     [super dealloc];
 }
-
 
 @end
