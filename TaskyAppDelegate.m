@@ -17,7 +17,11 @@
 @synthesize outText;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-	// Insert code here to initialize your application 
+	// Insert code here to initialize your application
+    
+    // use a fixed width font so list is aligned as in terminal output
+    // Richard Fuhr suggestion
+    [self.outText setFont:[NSFont fontWithName:@"Menlo" size:14.0]];
 }
 
 - (IBAction) handleListButton:(id)sender {
