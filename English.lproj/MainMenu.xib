@@ -12,8 +12,8 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="372"/>
 			<integer value="29"/>
+			<integer value="372"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -1389,7 +1389,7 @@
 													<string>public.url</string>
 												</object>
 											</object>
-											<string key="NSFrameSize">{682, 13}</string>
+											<string key="NSFrame">{{0, -1}, {682, 14}}</string>
 											<reference key="NSSuperview" ref="384991116"/>
 											<object class="NSTextContainer" key="NSTextContainer" id="644367360">
 												<object class="NSLayoutManager" key="NSLayoutManager">

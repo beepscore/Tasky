@@ -19,7 +19,7 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
 	// Insert code here to initialize your application
     
-    // use a fixed width font so list is aligned as in terminal output
+    // use a fixed width font so list aligns as in terminal output
     // Richard Fuhr suggestion
     [self.outText setFont:[NSFont fontWithName:@"Menlo" size:14.0]];
 }
