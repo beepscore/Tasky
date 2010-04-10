@@ -1331,7 +1331,7 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSButton" id="944181085">
 							<reference key="NSNextResponder" ref="439893737"/>
-							<int key="NSvFlags">264</int>
+							<int key="NSvFlags">268</int>
 							<string key="NSFrame">{{20, 257}, {52, 19}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<bool key="NSEnabled">YES</bool>
@@ -1355,7 +1355,7 @@
 						</object>
 						<object class="NSScrollView" id="278143784">
 							<reference key="NSNextResponder" ref="439893737"/>
-							<int key="NSvFlags">265</int>
+							<int key="NSvFlags">274</int>
 							<object class="NSMutableArray" key="NSSubviews">
 								<bool key="EncodedWithXMLCoder">YES</bool>
 								<object class="NSClipView" id="384991116">
@@ -1520,7 +1520,7 @@
 						</object>
 						<object class="NSTextField" id="366773147">
 							<reference key="NSNextResponder" ref="439893737"/>
-							<int key="NSvFlags">268</int>
+							<int key="NSvFlags">266</int>
 							<string key="NSFrame">{{20, 284}, {699, 22}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<bool key="NSEnabled">YES</bool>
