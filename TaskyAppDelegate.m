@@ -47,6 +47,7 @@
     [task launch];
     
     data = [[outPipe fileHandleForReading] readDataToEndOfFile];
+    // use Unicode encoding, not ASCII
     aString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     [outText setString:aString];
     [aString release];
