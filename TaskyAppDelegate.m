@@ -47,7 +47,7 @@
     [task launch];
     
     data = [[outPipe fileHandleForReading] readDataToEndOfFile];
-    aString = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
+    aString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     [outText setString:aString];
     [aString release];
     [task release];
